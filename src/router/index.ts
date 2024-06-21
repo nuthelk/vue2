@@ -1,5 +1,6 @@
 // src/router/index.ts
 import Vue from "vue";
+import UploadFile from "@/components/UploadFile.vue";
 import VueRouter from "vue-router";
 import MainView from "@/components/MainView.vue";
 
@@ -13,6 +14,11 @@ export default new VueRouter({
       path: "/",
       name: "Home",
       component: MainView,
+    },
+    {
+      path: "/upload",
+      name: "Upload",
+      component: UploadFile,
     },
   ],
 });
