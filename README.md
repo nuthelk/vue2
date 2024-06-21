@@ -1,4 +1,4 @@
-# prueba-tecnica
+# my-project1
 
 ## Project setup
 ```
