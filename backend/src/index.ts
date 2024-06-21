@@ -8,8 +8,10 @@ import cors from "cors";
 const app = express();
 const port = process.env.PORT || 3000;
 
+// Configuración de CORS para permitir cualquier origen
 app.use(cors());
 
+// Inicializar Firebase Admin SDK
 const serviceAccount = require("../config/serviceAccountKey.json");
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
@@ -18,6 +20,7 @@ admin.initializeApp({
 const db = admin.firestore();
 const bucket = admin.storage().bucket();
 
+// Configuración de multer para subir archivos
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
 
